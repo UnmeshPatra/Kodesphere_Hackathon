@@ -27,6 +27,9 @@ const PostDevices = ({id}) => {
 
     const FormSubmitHandler = (e) => {
       e.preventDefault();
+      if (device===""){
+        return toast.error("Please select a device");
+        }
       let data ={}
       if (device==="fan"){
       data ={

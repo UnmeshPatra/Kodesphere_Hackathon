@@ -45,6 +45,9 @@ const GetDevices = ({id}) => {
       
     }, []); 
     const reloadHandler = () => {
+      if (device===""){
+      return toast.error("Please select a device");
+      }
       axios.get(`https://kodessphere-api.vercel.app/devices/${id}`)
       .then(response => {
         setData(
