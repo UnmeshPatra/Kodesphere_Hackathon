@@ -30,12 +30,12 @@ const NumberInput = React.forwardRef(function CustomNumberInput(props, ref) {
   );
 });
 
-export default function QuantityInput({onChange, currval}) {
+export default function TempInput({onChange, currval}) {
     const [value, setValue] = React.useState(0)
     const handleChange = (event, value) => {
         onChange(value);
       };
-  return <NumberInput aria-label="Quantity Input" min={0} max={5}  onChange={handleChange} value={currval}/>;
+  return <NumberInput aria-label="Quantity Input" min={16} max={30}  onChange={handleChange} value={currval}/>;
 }
 
 const blue = {
