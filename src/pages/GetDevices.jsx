@@ -31,11 +31,11 @@ const GetDevices = ({id}) => {
           toast.success("Success");
   
           // Assuming data.fan, data.bulb, data.led, data.ac exist in the API response structure
-          setSpeed(response.data.fan.value);
-          setBulb(response.data.bulb.value);
-          setColor(response.data.led.value);
-          setTemp(response.data.ac.value.temp);
-          setAc(response.data.ac.value.state);
+          setSpeed(response.data.fan);
+          setBulb(response.data.bulb);
+          setColor(response.data.led);
+          setTemp(response.data.ac.temp);
+          setAc(response.data.ac.state);
         } catch (error) {
           console.error('Error fetching data:', error);
           toast.error(error.message);
